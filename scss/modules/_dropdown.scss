@@ -1,0 +1,142 @@
+.dropdown {
+	position:relative;
+	z-index:10;
+	display:block;
+	min-width:200px;
+	background:white;
+	.dropdown-items {
+		margin-top:$gap-xs;
+		border-radius:$border-radius-sm;
+		padding-bottom:$gap-xs;
+		padding-top:$gap-xs;
+		width:100%;
+		display:flex;
+		flex-direction:column;
+		position:absolute;
+		display:none;
+		> a {
+			font-size:14px;
+			padding:$gap-sm $gap;
+			line-height:1;
+			&:focus,&:active,&:hover {
+				text-decoration:none;
+			}
+		}
+	}
+	label {
+		display:block;
+		> .title {
+			height:30px;
+			display:flex;
+			align-items:center;
+			padding-left:$gap-sm;
+			padding-right:$gap-lg;
+			position:relative;
+			font-size:16px;
+			border-radius:$border-radius-sm;
+			@include font-regular;
+			-webkit-user-select: none;
+		}
+		.icon {
+			transition:all 0.15s;
+		}
+	}
+	input[type="checkbox"] {
+		clip: rect(1px, 1px, 1px, 1px);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+		&:checked {
+			+ label {
+				.icon {
+					transform:translateY(-50%) rotate(180deg);
+				}
+			}
+			~ .dropdown-items {
+				display:flex;
+			}
+		}
+
+	}
+	&.has-caret {
+		label > .icon {
+			position:absolute;
+			right:$gap-sm;
+			top:50%;
+			transform:translateY(-50%);
+			svg {
+				width:16px;
+				height:16px;
+			}
+		}
+	}
+	&:not(.has-caret) {
+		> .title:after {
+			margin-left:$gap-sm;
+			content:"";
+			background-image:url('../img/caret-down.svg');
+			width:12px;
+			height:12px;
+			background-size:cover;
+			background-repeat:no-repeat;
+			display:block;
+		}
+		input[type="checkbox"]:checked {
+			~ .title:after {
+				transform:rotate(-180deg)
+			}
+		}
+	}
+}
+
+.nav-dropdown {
+	position:relative;
+	.dropdown-items {
+		display:none;
+		position:relative;
+		width:100%;
+		> a {
+			display:block;
+			&:hover {
+				background:#eee;
+				text-decoration:none;
+			}
+		}
+	}
+	> label {
+		display:flex;
+		align-items:center;
+		&:after {
+			margin-left:$gap-sm;
+			content:"";
+			background-image:url('../img/caret-down.svg');
+			width:12px;
+			height:12px;
+			background-size:cover;
+			background-repeat:no-repeat;
+			display:block;
+		}
+	}
+	input[type="checkbox"] {
+		display:none;
+		&:checked {
+			~ .dropdown-items {
+				display:block;
+			}
+			+ label:after {
+				transform:rotate(-180deg)
+			}
+		}
+	}
+	&.active {
+		+ .dropdown-items {
+			display:block;
+		}
+		> label:after {
+			transform:rotate(-180deg)
+		}
+	}
+}
+

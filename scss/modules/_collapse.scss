@@ -1,0 +1,100 @@
+.collapse-block {
+	width:100%;
+	position:relative;
+	margin-top:$gap-md;
+	+ .collapse-block {
+		margin-top:$gap-sm;
+	}
+	+ .icon-block {
+		margin-top:$gap;
+	}
+	.collapse-content {
+		overflow:hidden;
+		height:0;
+		transition:all 0.15s;
+	}
+
+	[type="checkbox"] {
+		opacity:0;
+		position:absolute;
+		top:0;
+		&:checked {
+			~ .collapse-content {
+				height:auto;
+				overflow:visible;
+				padding:$gap-sm 0;
+			}
+			~ .heading .btn-collapse {
+				.icon {
+					svg {
+						transform:rotate(-180deg);
+						stroke:white;
+					}
+				}
+			}
+		}
+	}
+	> .heading {
+		position:relative;
+		display:flex;
+		align-items:center;
+		padding:0;
+		height:40px;
+		cursor:pointer;
+		&:before {
+			content:"";
+			height:2px;
+			width:100%;
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+		}
+		.title {
+			background:white;
+			position:relative;
+			padding-right:$gap-sm;
+			display:inline-flex;
+		}
+		h3 {
+			font-size:20px;
+			color:$red;
+			@include font-regular;
+		}
+	}
+	> .heading .controls {
+		position:absolute;
+		cursor:pointer;
+		top:50%;
+		transform:translateY(-50%);
+		right:0;
+		background:white;
+		margin-top:-2px;
+		padding-left:$gap-sm;
+		.icon {
+			svg {
+				width:14px;
+				height:14px;
+			}
+		}
+	}
+	.btn-collapse {
+		border-radius:50%;
+		border:1px solid $gray-dk;
+		height:26px;
+		width:26px;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		stroke:$gray-dk;
+		background:none;
+		.icon {
+			svg {
+				background:transparent !important;
+				transition:all 0.15s;
+			}
+		}
+	}
+	+ .page-section {
+		margin-top:$gap-lg;
+	}
+}

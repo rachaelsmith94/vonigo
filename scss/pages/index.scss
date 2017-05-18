@@ -1,0 +1,10 @@
+@import "../base/colors";
+@import "../base/settings";
+@import "../base/mixins";
+
+h1{
+	margin-left: 56px;
+    padding-top: 12px;
+    font-weight: lighter !important;
+    font-size: medium;
+}

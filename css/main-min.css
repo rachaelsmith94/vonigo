@@ -1,0 +1,244 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-smooth: always;
+  margin: 0;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  font-size: 14px;
+  font-family: "proxima-nova", sans-serif; }
+
+a {
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  text-decoration: none; }
+
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+  color: #a1a8b3; }
+
+hr {
+  height: 2px;
+  padding: 0;
+  margin: 20px 0;
+  background-color: rgba(247, 247, 247, 0.7);
+  border: 0; }
+
+.slds-hide {
+  display: none !important; }
+
+h1 {
+  font-size: 32px;
+  font-weight: 600; }
+
+h2 {
+  font-size: 24px;
+  font-weight: 600; }
+
+h3 {
+  font-size: 20px;
+  font-weight: 600; }
+
+h4 {
+  font-size: 18px;
+  font-weight: 600; }
+
+h5 {
+  font-size: 16px;
+  font-weight: 600; }
+
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+strong {
+  font-weight: 600; }
+
+label {
+  font-weight: 600;
+  color: #777; }
+
+.underline {
+  text-decoration: underline; }
+
+.italic {
+  font-style: italic; }
+
+.highlight {
+  font-weight: 600;
+  display: inline-block;
+  background: rgba(255, 255, 0, 0.4); }
+
+.txt-intro {
+  font-size: 16px;
+  padding-bottom: 20px; }
+
+.txt-lg {
+  font-size: 22px; }
+
+.wf-loading {
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  opacity: 0; }
+
+.wf-loading .page {
+  visibility: hidden; }
+
+.wf-active, .wf-inactive {
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  opacity: 1; }
+
+.wf-active .page, .wf-inactive .page {
+  visibility: visible; }
+
+.top-nav {
+  width: 100% !important;
+  background: #F7F7F7;
+  height: 90px;
+  position: relative;
+  z-index: 2; }
+
+.top-nav .navbar-brand {
+  background-color: #51D2B7;
+  width: 230px;
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 30px;
+  color: white; }
+
+.top-nav .top-nav-content {
+  float: right;
+  display: inline-block; }
+
+.top-nav .top-nav-content li {
+  display: inline-block; }
+
+.top-nav .menu {
+  font-size: 30px;
+  cursor: pointer; }
+
+.wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.wrapper .toggled {
+  padding-left: 150px; }
+
+.wrapper .page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding-left: 150px;
+  display: block; }
+
+.sidenav {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2A2D33;
+  padding-top: 112px;
+  padding-left: 30px;
+  overflow-y: auto; }
+
+.sidenav .divide-text {
+  color: #686B73;
+  display: block;
+  height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: smaller; }
+
+.sidenav .divider {
+  display: block;
+  border-bottom: 0.5px #686B73 solid;
+  margin-left: -10px;
+  margin-top: -10px; }
+
+.sidenav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #A5A5A7;
+  line-height: 44px; }
+
+.sidenav li .icons {
+  color: #686B73;
+  padding-right: 5px; }
+
+.sidenav li .sidenav-item {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: bold; }
+
+.sidenav li i {
+  font-size: 28px;
+  line-height: 44px;
+  vertical-align: middle; }
+
+.sidenav li a {
+  display: block;
+  color: #A5A5A7;
+  text-decoration: none; }
+
+.sidenav li a:hover {
+  color: white;
+  background-color: #F7F7F7; }
+
+.sidenav li a:active, .sidenav li .sidebar-nav li a:focus {
+  color: white;
+  background-color: #F7F7F7; }
+
+.sidenav li .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+
+.sidenav a:hover {
+  color: #f1f1f1; }
+
+@media screen and (max-width: 768px) {
+  .sidenav {
+    padding-top: 15px;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .sidenav a {
+    font-size: 18px; } }
+
+.offcanvas a:focus {
+  color: #f1f1f1; }
+
+menu {
+  font-size: 30px;
+  cursor: pointer; }

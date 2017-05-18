@@ -1,0 +1,255 @@
+//@keyframes nav-text {
+//  from {
+//    width:auto;
+//  }
+//  to {
+//    width:0;
+//  }
+//}
+.nav .nav-divider{
+  height: 1px;
+  margin-left:-31px;
+  overflow: hidden;
+  background-color: $sidenav-icon-color;
+  width: 115%;
+}
+
+.divide-text{
+  color: $sidenav-icon-color;
+  display: block;
+  height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: smaller;
+}
+.sidenav {
+  width:$sidebar-width;
+  background-color: $gray-dk;
+  //padding-left:30px;
+  overflow-y: auto;
+  position:absolute;
+  height:100%;
+  padding:8px 0 0 30px;
+  @media (max-width:1025px) {
+    width:55px;
+    padding-left: 14px;
+    li.divide-text{
+      display:none;
+    }
+    li.nav-divider{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 15px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    left: -230px;
+    a {
+      font-size: 18px;
+    }
+  }
+  li {
+    list-style: none;
+    align: left;
+    margin: 0;
+    display:flex;
+    //justify-content:flex-end;
+    padding: 0;
+    color: $sidenav-list-color;
+    line-height: 40px;
+    width:40px;
+    .sidenav-item{
+      margin-left: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      transition:all 0.15s;
+      white-space:nowrap;
+      //overflow:hidden;
+      //width:0;
+      animation:nav-text 0.15s forwards;
+    }
+    i{
+      font-size:26px;
+      line-height: 40px;
+      vertical-align:middle;
+      color: $sidenav-icon-color;
+      padding-right: 5px;
+      width:40px;
+      min-width:33px;
+    }
+    a{
+      display: block;
+      color: $sidenav-list-color;
+      text-decoration: none;
+    }
+    a:hover {
+      color: white;
+      background-color: $gray-lt;
+    }
+    a:active, .sidebar-nav li a:focus {
+        color: white;
+        background-color: $gray-lt;
+    }
+    .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+        color: #f1f1f1;
+    }
+  }
+}
+
+.btn-sidebar-menu {
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+  height:45px;
+  width:30px;
+  background:#ddd;
+  color:#444;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  .fa {
+    transition:all 0.15s 0.15s;
+  }
+  &:hover,&:focus {
+    text-decoration:none;
+  }
+
+}
+@keyframes collapse-sidebar {
+  from {
+    right:0
+  }
+  to {
+    right:-270px;
+  }
+}
+
+.sidenav-right{
+  right: 0;
+  z-index:1;
+  background-color: $gray-md;
+  width: 300px;
+  overflow-y: auto;
+  position:absolute;
+  height:100%;
+  padding: 60px 30px 30px;
+  &.collapsed {
+    animation:collapse-sidebar 0.15s forwards;
+    .btn-sidebar-menu .fa {
+      transform:rotate(-180deg);
+    }
+  }
+  .nav .nav-divider {
+    margin-left:0;
+    width:100%;
+    opacity:0.3;
+  }
+  .profile-pics{ 
+    padding: 0px 5px 5px 0px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+  }
+  li {
+    list-style: none;
+    align: left;
+    margin: well0;
+    display:flex;
+    padding: 0;
+    line-height: 40px;
+    .divide-text{
+      color: $side-nav-right-divider;
+    }
+    .nav-divider{
+      color:$side-nav-right-divider;
+    }
+    .arrow{
+      margin-top: -20px;
+      margin-left: -20px;
+      height: 40px;
+      width:15px;
+      background-color: $gray;
+      background-image: none;
+    }
+    .follow{
+      display: inline-block;
+      width: 40px;
+    }
+    .sidenav-item{
+      font-size: 14px;
+      font-weight: bold;
+      transition:all 0.15s;
+      white-space:nowrap;
+      animation:nav-text 0.15s forwards;
+    }
+    i{
+      font-size:18px;
+      line-height: 40px;
+      vertical-align:middle;
+      color: $sidenav-right-icon;
+      width:20px;
+      min-width:33px;
+    }
+    .sidenav-right-item{
+      color: $sidenav-right-text;
+      line-height: 25px;
+      font-weight: bold;
+    }
+  }
+}
+
+.offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+
+menu {
+  font-size:30px;
+  cursor:pointer;
+}
+
+.wrapper {
+  padding-left:0;
+  transition:all 0.10s;
+  &.toggled {
+    li.divide-text{
+      display:block;
+    }
+    li.nav-divider{
+      display: block;
+    }
+    .sidenav-item {
+      //opacity:1;
+      //width:auto;
+      transition:all 0.15s;
+    }
+    .sidenav {
+      left:0;
+      z-index:2;
+      width: $sidebar-width;
+      > li {
+        //justify-content:flex-start;
+        overflow:visible;
+        white-space:normal;
+        width:100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+h1 {
+    font-weight: lighter;
+    font-size: 28.5px;
+}
+h2 {
+	font-size:24px;
+	@include font-semibold;
+}
+h3 {
+	font-size:20px;
+	@include font-semibold;
+}
+h4 {
+	font-size:18px;
+	@include font-semibold;
+}
+h5 {
+	font-size:16px;
+	@include font-semibold;
+}
+h6 {
+	font-size:14px;
+	@include font-semibold;
+	text-transform:uppercase;
+}
+
+strong {
+	@include font-semibold;
+}
+
+label {
+	font-weight:$weight-semibold;
+	color:#777;
+}
+
+.underline {
+	text-decoration:underline
+}
+
+.italic {
+	font-style:italic;
+}
+
+.highlight {
+	@include font-semibold;
+	display:inline-block;
+	background:rgba(yellow,0.4);
+}
+
+.txt-intro {
+	font-size:16px;
+	padding-bottom:$gap;
+}
+
+.txt-lg {
+	font-size:22px;
+}
+
+// Get rid of the FOUT with typekit fonts
+.wf-loading {
+	transition:all 0.15s;
+	opacity:0;
+	.page {
+
+		visibility:hidden;
+	}
+}
+
+.wf-active,.wf-inactive {
+	transition:all 0.15s;
+	opacity:1;
+	.page {
+		visibility:visible;
+	}
+}
+
+
