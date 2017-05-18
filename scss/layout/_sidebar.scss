@@ -58,7 +58,6 @@
     padding: 0;
     color: $sidenav-list-color;
     line-height: 40px;
-    width:40px;
     .sidenav-item{
       margin-left: 5px;
       font-size: 16px;
@@ -69,27 +68,41 @@
       //width:0;
       animation:nav-text 0.15s forwards;
     }
+    a{
+      display: inline-flex;
+      color: $sidenav-list-color;
+      text-decoration: none;
+      z-index: 1;
+      width: $sidebar-width;
+      &:hover {
+        color: white;
+        background-color: $sidenav-hover;
+        cursor: pointer;
+        width: $sidebar-width;
+        margin-left: -30px;
+        .fa{
+          color: white;
+          background-color: $sidenav-hover;
+          cursor: pointer;
+        }
+      }
+    }
+    a:active, .sidebar-nav li a:focus {
+        color: white;
+        background-color: $sidenav-hover;
+    }
     i{
       font-size:26px;
       line-height: 40px;
       vertical-align:middle;
       color: $sidenav-icon-color;
       padding-right: 5px;
-      width:40px;
       min-width:33px;
-    }
-    a{
-      display: block;
-      color: $sidenav-list-color;
-      text-decoration: none;
-    }
-    a:hover {
-      color: white;
-      background-color: $gray-lt;
-    }
-    a:active, .sidebar-nav li a:focus {
+      &:hover{
         color: white;
-        background-color: $gray-lt;
+        background-color: $sidenav-hover;
+        cursor: pointer;
+      }
     }
     .closebtn {
       position: absolute;
@@ -97,17 +110,6 @@
       right: 25px;
       font-size: 36px;
       margin-left: 50px;
-    }
-  }
-  a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    &:hover {
-        color: #f1f1f1;
     }
   }
 }
@@ -174,6 +176,23 @@
     display:flex;
     padding: 0;
     line-height: 40px;
+    a{
+      display: inline-flex;
+      color: $sidenav-list-color;
+      text-decoration: none;
+      z-index: 1;
+      width: $sidebar-width;
+      &:hover {
+        color: white !important;
+        background-color: $gray;
+        cursor: pointer;
+        .fa{
+          color: white;
+          background-color: $gray;
+          cursor: pointer;
+        }
+      }
+    }
     .divide-text{
       color: $side-nav-right-divider;
     }

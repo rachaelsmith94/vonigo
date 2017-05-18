@@ -278,23 +278,23 @@ body { background: #F7F7F7; }
 @media screen and (max-width: 767px) { .sidenav { padding-top: 15px; overflow-x: hidden; -webkit-transition: 0.5s; transition: 0.5s; left: -230px; }
   .sidenav a { font-size: 18px; } }
 
-.sidenav li { list-style: none; align: left; margin: 0; display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0; color: #A5A5A7; line-height: 40px; width: 40px; }
+.sidenav li { list-style: none; align: left; margin: 0; display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0; color: #A5A5A7; line-height: 40px; }
 
 .sidenav li .sidenav-item { margin-left: 5px; font-size: 16px; font-weight: bold; -webkit-transition: all 0.15s; transition: all 0.15s; white-space: nowrap; -webkit-animation: nav-text 0.15s forwards; animation: nav-text 0.15s forwards; }
 
-.sidenav li i { font-size: 26px; line-height: 40px; vertical-align: middle; color: #686B73; padding-right: 5px; width: 40px; min-width: 33px; }
+.sidenav li a { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; color: #A5A5A7; text-decoration: none; z-index: 1; width: 230px; }
 
-.sidenav li a { display: block; color: #A5A5A7; text-decoration: none; }
+.sidenav li a:hover { color: white; background-color: #656c7e; cursor: pointer; width: 230px; margin-left: -30px; }
 
-.sidenav li a:hover { color: white; background-color: #F7F7F7; }
+.sidenav li a:hover .fa { color: white; background-color: #656c7e; cursor: pointer; }
 
-.sidenav li a:active, .sidenav li .sidebar-nav li a:focus { color: white; background-color: #F7F7F7; }
+.sidenav li a:active, .sidenav li .sidebar-nav li a:focus { color: white; background-color: #656c7e; }
+
+.sidenav li i { font-size: 26px; line-height: 40px; vertical-align: middle; color: #686B73; padding-right: 5px; min-width: 33px; }
+
+.sidenav li i:hover { color: white; background-color: #656c7e; cursor: pointer; }
 
 .sidenav li .closebtn { position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; }
-
-.sidenav a { padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; -webkit-transition: 0.3s; transition: 0.3s; }
-
-.sidenav a:hover { color: #f1f1f1; }
 
 .btn-sidebar-menu { position: absolute; top: 0; left: 0; display: block; height: 45px; width: 30px; background: #ddd; color: #444; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
@@ -319,6 +319,12 @@ body { background: #F7F7F7; }
 .sidenav-right .profile-pics { padding: 0px 5px 5px 0px; width: 40px; height: 40px; display: inline-block; }
 
 .sidenav-right li { list-style: none; align: left; margin: well0; display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0; line-height: 40px; }
+
+.sidenav-right li a { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; color: #A5A5A7; text-decoration: none; z-index: 1; width: 230px; }
+
+.sidenav-right li a:hover { color: white !important; background-color: #BDC2CA; cursor: pointer; }
+
+.sidenav-right li a:hover .fa { color: white; background-color: #BDC2CA; cursor: pointer; }
 
 .sidenav-right li .divide-text { color: #929395; }
 
