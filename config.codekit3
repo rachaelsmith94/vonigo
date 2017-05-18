@@ -3119,7 +3119,7 @@
 		"oAP": "\/images\/batman.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/david.jpg": {
@@ -3129,7 +3129,7 @@
 		"oAP": "\/images\/david.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/E-T.jpg": {
@@ -3139,7 +3139,7 @@
 		"oAP": "\/images\/E-T.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/james_dickie.jpg": {
@@ -3149,7 +3149,7 @@
 		"oAP": "\/images\/james_dickie.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/lynette_crow.jpg": {
@@ -3169,7 +3169,7 @@
 		"oAP": "\/images\/profile pic.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/profile-pic2.jpg": {
@@ -3179,7 +3179,7 @@
 		"oAP": "\/images\/profile-pic2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/steve.jpg": {
@@ -3199,7 +3199,7 @@
 		"oAP": "\/images\/tardis.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/tina.jpeg": {
@@ -3209,7 +3209,7 @@
 		"oAP": "\/images\/tina.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/index.html": {
@@ -3516,10 +3516,10 @@
 	},
 "projectAttributes": {
 	"creationDate": 516176174,
-	"displayValue": "vonigo",
+	"displayValue": "vonigo2",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-cryingJordan",
-	"lastBuiltDate": 516596071
+	"lastBuiltDate": 516793668
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
